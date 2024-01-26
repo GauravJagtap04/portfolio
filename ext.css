@@ -1,0 +1,398 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" filter="invert()" stroke="%23000000" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+}
+
+a{
+    cursor: none;
+}
+
+.nav{
+    background-color: black;
+    display: flex;
+    cursor: none;
+}
+
+.nav img{
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    filter: invert();
+    opacity: 70%;
+    transition: filter .3s ease-in-out;
+    border: 0.16rem solid rgba(165, 165, 165, 0.568);
+    border-radius: 11px;
+    padding: 4px;
+    z-index: 3;
+}
+
+.nav img:hover{
+    filter: none;
+    background-color: rgba(211, 211, 211, 0.864);
+    border-color: #ffffff;
+}
+
+
+
+.nav-content img{
+    position: absolute;
+}
+
+.nav .nav-content .skills,
+.nav .nav-content .education,
+.nav .nav-content .projects{
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 2;
+    transition-property: top, right,transform;
+    transition-duration: .5s;
+}
+
+.nav:hover .nav-content .skills{
+    top: 4rem;
+    right: 1rem;
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.nav:hover .nav-content .education{
+    top: 7rem;
+    right: 1rem;
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.nav:hover .nav-content .projects{
+    top: 10rem;
+    right: 1rem;
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+
+
+.container{
+    border: 0.16rem solid rgba(43, 43, 43, 0.568);
+    border-radius: 1.3rem;
+    top: 15vh;
+    width: 25rem;
+    height: 31rem;
+    padding: 1.875rem;
+    box-sizing: border-box;
+    box-shadow: 0 0.625rem 1.875rem;
+    backdrop-filter: blur(.4rem);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 1s;
+    transition-delay: 0s;
+    scroll-behavior: smooth;
+}
+
+figure img{
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 50%;
+    margin-top: -1rem;
+    border: 0.16rem solid rgba(70, 70, 70, 0.813);
+    padding: .3rem;
+}
+
+.info h1{
+    font-family: "Poppins", sans-serif;
+    color: #252525e2;
+    font-size: 2.1875rem;
+    font-weight: 600;
+    margin-top: -0.7rem;
+    filter: invert();
+}
+
+.info h4{
+    font-family: "Montserrat", sans-serif;
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: 400;
+    opacity: 40%;
+    margin-top: -0.8125rem;
+}
+
+.address a:link{
+    color: #f5f5f5de;
+    text-decoration: none;
+}
+
+.address a:hover{
+    color: #999999c4;
+}
+
+.address img{
+    display: flex;
+    width: 1.2rem;
+    height: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin-left: 6rem;
+    margin-top: -0.6rem;
+    opacity: 70%;
+    filter: invert();
+}
+
+.address span{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1.25rem;
+    font-family: "kanit", sans-serif;
+    font-size:medium;
+    opacity: 70%;
+    color: #ffffff9e;
+}
+
+.social a{
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 1.2rem;
+    position: relative;
+    animation: zoom;
+    display: inline-flex;
+    transition: all .6s;
+    transition-delay: .02s;
+    border-radius: 1rem;
+    filter: invert();
+    opacity: 70%;
+}
+
+.social a:hover{
+    transform: scale(1.3) translateZ(-0.1rem);
+    box-shadow: #707070 0px 0px 8px 1px;
+}
+
+.social img{
+    opacity: 90%;
+}
+
+.social .youtube:hover{
+    background-color: #00fff2;
+    border-radius: 1rem;
+    transition: background-color .4s ease-in-out;
+}
+
+.social .facebook:hover{
+    background-color: #ff2a007c;
+    border-radius: 1rem;
+    transition: background-color .4s ease-in-out;
+}
+
+.social .instagram:hover{
+    background-color: #00ff3cc3;
+    border-radius: 1rem;
+    transition: background-color .4s ease-in-out;
+}
+
+.social .twitter:hover{
+    background-color: #ff4000;
+    border-radius: 1rem;
+    transition: background-color .4s ease-in-out;
+}
+
+.contact{
+    position: relative;
+    filter: invert();
+    margin: 0%;
+}
+
+.contact .image,
+.contact .text{
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contact .text{
+    position: absolute;
+    right: 37%;
+    top: 15%;
+    opacity: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    color: #000000;
+    scale: 0%;
+    transition: scale .5s ease-in-out;
+}
+
+.contact .image{
+    width: 2.4rem;
+    height: 2.4rem;
+    align-self: center;
+    position: relative;
+    transition: all 1s;
+    opacity: 70%;
+}
+
+.contact:hover .image{
+    opacity: 10%;
+    transform: scale(1.3);
+}
+
+.contact:hover .text{
+    opacity: 80%;
+    text-decoration: none;
+    color: #000000;
+    scale: 100%;
+}
+
+
+
+
+
+
+
+/* The popup form - hidden by default */
+.form-popup{
+    display: none;
+    border: 0.1rem solid#f1f1f12b;
+    z-index: 0;
+    position: absolute;
+    top: 20%;
+    cursor: pointer;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    border-radius: 2rem;
+    background: #e0e0e0;
+    box-shadow:  35px 35px 70px #bebebe,
+                 -35px -35px 70px #ffffff;
+}
+
+.form-container{
+    width: 25rem;
+    height: 22rem;
+    align-self: center;
+    align-items: center;
+    align-items: center;
+}
+
+.form-container .close-form img{
+    opacity: 60%;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+}
+
+.form-popup .form-container h1{
+    color: #072b80;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7rem;
+    margin: 2rem;
+    font-weight: 500;
+}
+
+.form-container b{
+    font-family: "Kanit", sans-serif;
+    color: #0e141f;
+    margin: 0.5rem;
+    font-size: large;
+    display: inline-block;
+    margin-top: 0.6rem;
+}
+
+.details input{
+    width: 70%;
+}
+
+.details input[type=text]{
+    padding: 0;
+    height: 30px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .15);
+    background-color: #ffffffce;
+    border-radius: 0.4rem;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    transition: text-align;
+}
+
+.details input[type=text]:focus{
+    text-align: left;
+}
+
+.message-field{
+    margin-top: 0.7rem;
+}
+
+.message-field textarea{
+    width: 85%;
+    padding: 0;
+    height: 5rem;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .15);
+    background-color: #ffffffce;
+    border-radius: 0.4rem;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    transition-property: text-align, border;
+}
+
+.message-field textarea:focus{
+    text-align: left;
+    border: 2px solid #000000;
+}
+
+.form-container .btn {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 1rem;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.form-container .btn:hover{
+    box-shadow: #000000 0 0 0 3px, transparent 0 0 0 0;
+}

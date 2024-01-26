@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav</title>
+    <link rel="stylesheet" href="ext.css">
+    <link rel="shortcut icon" href="icons/idcardicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Montserrat:wght@300&family=Nunito:wght@300&family=Open+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        function openForm(){
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("info-container").style.display = "none";
+            document.getElementById("body").style.backgroundImage = "url(background2.png)";
+        }
+        function closeForm(){
+            document.getElementById("myForm").style.display = "none";
+            document.getElementById("info-container").style.display = "block";
+            document.getElementById("body").style.backgroundImage = "url(background.jpg)";
+        }
+    </script>
+</head>
+<body id="body">
+    <div class="container" id="info-container">
+        <div class="nav">
+            <div class="info-image">
+                <img src="icons/menu-2.png" alt="navigation">
+            </div>
+            <div class="nav-content">
+                <img src="icons/skills.png" alt="skill" class="skills">
+                <img src="icons/education.png" alt="education" class="education">
+                <img src="icons/projects.png" alt="projects" class="projects">
+            </div>
+        </div>
+        <figure>
+            <img src="icons/profile_icon.png" alt="profile photo">
+        </figure>
+        <div class="info">
+            <h1>Gaurav Jagtap</h1>
+            <h4>Full Stack Developer</h4><br>
+            <div class="address">
+                <a href="https://maps.app.goo.gl/1xiQwoGwv9qKYCuB6"/>
+                    <img src="icons/map_pin.png" alt="location">
+                    <span>Katraj, Pune</span>
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="social">
+            <a href="https://www.youtube.com/channel/UCdVaPV9bkyZcOm1qhkUgCxA"><img src="icons/youtubeoutline.png" alt="youtube" class="youtube"></a>
+            <a href="https://www.facebook.com/gaurav.jagtap.5832"><img src="icons/facebookoutline.png" alt="facebook" class="facebook"></a>
+            <a href="https://www.instagram.com/gaurav_jagtap_08"><img src="icons/instagramoutline.png" alt="instagram" class="instagram"></a>
+            <a href="https://www.instagram.com/gaurav_jagtap_08"><img src="icons/twitteroutline.png" alt="twitter" class="twitter"></a>
+        </div>
+        <div class="contact">
+            <img src="icons/message.png" alt="contact" class="image"></a>
+            <a onclick="openForm()">
+                <div class="text">Contact me</div>
+            </a>
+        </div>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form method="POST" action="form.php" class="form-container">
+            <div class="close-form" onclick="closeForm()"><img src="icons/x.png" alt="Close"></div>
+            <h1>Contact me</h1>
+            <div class="details">
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" name="Name" required><br>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required><br>
+            </div>
+            <div class="message-field">
+                <textarea class="textarea" name="msg" placeholder="Enter Message"></textarea>
+            </div>
+        <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!--
+border-radius: 58px;
+background: #e0e0e0;
+box-shadow:  22px 22px 44px #bebebe,
+            -22px -22px 44px #ffffff;
+
+
+    
+$(window).load(function(){
+            $(function(){
+                $(".nav-content").click(function(){
+                    $(this).css("opacity", "1");
+                });
+            });
+        });
+-->
