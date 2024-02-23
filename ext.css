@@ -358,7 +358,7 @@ figure img{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     transition-property: text-align, border;
-    resize = none;
+    resize: none;
 }
 
 .message-field textarea:focus{
